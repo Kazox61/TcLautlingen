@@ -2,160 +2,77 @@
 <main>
     <div class="bg-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto">
-            <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
+            <div class="flex justify-center items-center">
                 <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
                     <h1 class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-                        {{ .Site.Title }}
+                        TC Lautlingen
                     </h1>
                     <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
-                        {{ .Site.Params.Moto }}
+                        Tennis, das verbindet
                     </h2>
-                    <p class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">
-                        {{ .Site.Params.Description}}
+                    <div class="flex justify-center mt-8 space-x-6">
+                        {{ if .Site.Params.Social_media.Facebook.Enabled }}
+                        <a href="{{ .Site.Params.Social_media.Facebook.url }}" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Facebook</span>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                      clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        {{ end }}
+                        {{ if .Site.Params.Social_media.Instagram.Enabled }}
+                        <a href="{{ .Site.Params.Social_media.Instagram.url }}" class="text-gray-400 hover:text-gray-300">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                      clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid lg:grid-cols-2 lg:max-w-7xl lg:mx-auto lg:px-8 lg:gap-x-24 lg:gap-y-8 px-4 mt-12 gap-y-8">
+        <div class="item">
+            <img src="/images/home/drone.jpg" class="w-full h-auto rounded-2xl" alt="P1" loading="lazy" />
+        </div>
+        <div class="item">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
+                Herzlich willkommen beim Tennis-Club Lautlingen e.V.
+            </h2>
+            <div class="mt-6 text-gray-900 dark:text-white">
+                <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
+                    <p class="text-lg text-gray-900 dark:text-white">
+                        einem dynamischen Verein mit über 300 Mitgliedern, darunter besonders viele begeisterte junge Tennisspieler! Unsere idyllische Tennisanlage im Eyachtal verfügt über zahlreiche Plätze, darunter zwei mit Flutlicht ausgestattete Courts und einer Ballwand.
+                    </p>
+                    <p class="text-lg text-gray-900 dark:text-white">
+                        Unser Leitspruch lautet: "Tennis, das verbindet!" Als Verein, der großen Wert auf Gemeinschaft und Zusammenhalt legt, sind wir stolz darauf, unseren Mitgliedern eine breite Palette an Events und Aktivitäten für alle Altersgruppen anzubieten. Neben Tennis stehen auch weitere Sportangebote wie "Fit for Tennis" und Nordic Walking zur Verfügung, um eine vielfältige sportliche Erfahrung zu gewährleisten. Unser Ziel ist es, nicht nur Sportmöglichkeiten, sondern auch eine unterstützende Gemeinschaft zu bieten, in der man gemeinsam Freude hat.
                     </p>
                 </div>
-                <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/pages/court.png" }}
-
-                    {{ $thumb := ($hero.Fill "400x400 webp q90") }}
-                    {{ $large := ($hero.Fill "576x576 webp q90") }}
-
-                    <img srcset="
-                        {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" />
-                </div>
             </div>
+        </div>
+        <div class="item">
+            <p class="text-lg text-gray-900 dark:text-white">
+                Egal, ob Sie ein Anfänger oder erfahrener Tennisspieler sind – bei uns finden Sie schnell Anschluss und können sich auf und neben dem Platz wohlfühlen. Wir setzen uns stets dafür ein, unseren Mitgliedern die bestmögliche Unterstützung zu bieten, damit sie ihre Ziele im Tennissport erreichen können. Wir sind fest davon überzeugt, dass Tennis eine großartige Möglichkeit bietet, körperliche Fitness, soziale Kontakte und Spaß miteinander zu verbinden.
+            </p>
+            <p class="mt-6 text-lg text-gray-900 dark:text-white">
+                Wir freuen uns darauf, Sie auf unserer Homepage oder unserer Tennisanlage begrüßen zu dürfen! Bei Fragen oder Interesse an einer Mitgliedschaft erreichen Sie uns gerne unter <a href="mailto:info@tc-lautlingen.de">info@tc-lautlingen.de</a>.
+            </p>
+            <p class="mt-6 text-lg text-gray-900 dark:text-white">
+                Bis bald beim Tennis-Club Lautlingen! Sportliche Grüße, Fabian & Reinhold
+            </p>
+        </div>
+        <div class="item">
+            <img src="/images/home/court.jpg" class="w-full h-auto rounded-2xl" alt="P1" loading="lazy" />
         </div>
     </div>
 
-    <!-- More main page content here... -->
-
-    <!-- Our mission section -->
-    <div class="relative my-4">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
-            <div class="relative sm:py-8 lg:py-0">
-                <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
-                    <div class="absolute inset-y-0 w-full bg-gray-50 dark:bg-gray-900/10 right-1/2 rounded-r-3xl lg:right-72"></div><svg class="absolute -ml-3 top-8 left-1/2 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
-                        <defs>
-                            <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)"></rect>
-                    </svg>
-                </div>
-                <div class="relative w-full h-auto px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:px-0 lg:py-20">
-                    <div class="overflow-hidden shadow-xl rounded-2xl">
-                        {{ $p1image := resources.Get .Site.Params.P1.Image }}
-                        {{ with $p1image }}
-                        {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="w-full h-auto" alt="P1" loading="lazy" />
-                        {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-            <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
-                <div class="md:pt-12 sm:pt-6 lg:pt-20">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                        {{ .Site.Params.P1.Heading }}
-                    </h2>
-                    <div class="mt-6 text-gray-900 dark:text-white">
-                        <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
-                            {{ range .Site.Params.P1.Content }}
-                            <p class="text-lg text-gray-900 dark:text-white">
-                                {{ .text }}
-                            </p>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- JITsection -->
-    <div class="overflow-hidden sm:pt-6 lg:relative">
-        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
-            <div>
-                <div class="md:mt-8">
-                    <div class="mt-6 sm:max-w-xl">
-                        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl md:mt-16">
-                            {{ .Site.Params.P2.Heading }}
-                        </h2>
-                        {{ range .Site.Params.P2.Content }}
-                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
-                            {{ .text }}
-                        </p>
-                        {{ end }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
-            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <div class="hidden sm:block">
-                    <div class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full"></div><svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
-                        <defs>
-                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60" fill="currentcolor"></rect>
-                            </pattern>
-                        </defs>
-                        <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
-                    </svg>
-                </div>
-                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
-                    {{ $p2image := resources.Get .Site.Params.P2.Image }}
-                    {{ with $p2image }}
-                    {{ with .Resize (printf "%dx%d webp q90" .Width .Height) }}
-                    <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="p2" class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
-                    {{ end }}
-                    {{ end }}
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Sponsors section -->
-    <div class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 lg:items-center lg:gap-24">
-            <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-                {{ range .Site.Params.P3.Logos }}
-                <a href="{{ .url }}" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
-                    {{ if .image }}
-                    {{ $sponsor := resources.Get .image }}
-                    <img src="{{ $sponsor.RelPermalink }}" class="max-h-12 dark:invert" alt="{{ .alt }}" loading="lazy" />
-                    {{ else }}
-                    {{ $sponsor := resources.Get "images/global/sample-logo.svg" }}
-                    <img src="{{ $sponsor.RelPermalink }}" class="max-h-12 dark:invert" alt="{{ .alt }}" loading="lazy" />
-                    {{ end }}
-                </a>
-                {{ end }}
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl">
-                    {{ .Site.Params.P3.Heading }}
-                </h2>
-                {{ range .Site.Params.P3.Content }}
-                <p class="max-w-3xl mt-6 text-lg leading-7 text-gray-900 dark:text-white">
-                    {{ .text }}
-                </p>
-                {{ end }}
-                {{ range .Site.Params.P3.Links }}
-                <div class="my-6">
-                    <a href="{{ .url }}" class="text-base font-medium text-primary-400 dark:text-primary-100">
-                        {{ .text }}&nbsp&rarr;
-                    </a>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-
-    <!-- Blog section -->
     <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">
         <div class="absolute inset-0">
             <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
@@ -163,19 +80,15 @@
         <div class="relative px-2 mx-auto max-w-7xl">
             <div class="text-center">
                 <h2 class="text-3xl font-black tracking-tight text-primary-500 dark:text-primary-300 sm:text-4xl">
-                    {{ .Site.Params.P4.Heading }}
+                    News
                 </h2>
-                {{ range .Site.Params.P4.Content }}
-                <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4">
-                    {{ .text }}
-                </p>
-                {{ end }}
             </div>
-
             <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
                 <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
                     <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
-                        {{ range (.Paginator 3).Pages }}
+                        {{ $pagesInSubfolder := where .Site.RegularPages "Section" "news" }}
+                        {{ $filteredPages := first 3 $pagesInSubfolder }}
+                        {{ range $filteredPages }}
                         <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
                             <a href="{{.Permalink}}">
                                 {{ with .Params.featured_image }}
@@ -195,35 +108,6 @@
                                         {{ .Params.summary }}
                                     </p>
                                 </div>
-                                <div class="flex pt-6 font-medium text-primary-600 dark:text-primary-100 text-md">
-                                    <span class="pr-2 font-black">Tags:</span>
-                                    {{ range $elem_index, $elem_val := (.GetTerms "tags") }}
-                                    {{- if gt $elem_index 0 }}, {{ end -}}
-                                    <a href="{{ .Permalink }}" class="inline-flex items-center rounded-md bg-gray-300 hover:bg-primary-200 hover:text-black px-2.5 py-0.5 text-sm font-medium text-gray-900 ">{{ .LinkTitle }}</a>
-                                    {{- end -}}
-                                </div>
-                                <div class="flex items-center mt-6">
-                                    <div class="flex-shrink-0">
-                                        <span class="sr-only">{{ .Params.author }}</span>
-                                        {{ with .Params.authorimage }}
-                                        {{ with resources.Get . }}
-                                        {{ $authorimage := (.Resize "400x webp").RelPermalink }}
-                                        <img class="w-10 h-10 rounded-full" src="{{ $authorimage }}" alt="">
-                                        {{ end }}
-                                        {{ end }}
-                                    </div>
-                                    <div class="pt-1 ml-3">
-                                        <p class="text-sm font-medium text-gray-900 dark:text-white">
-                                            {{ .Params.author }}
-                                        </p>
-                                        <div class="flex space-x-1 text-sm text-gray-500 dark:text-white">
-                                            <time datetime="2020-02-12">{{.Date.Format "2006-01-02"}}</time>
-                                            <span aria-hidden="true">&middot;</span>
-                                            <span>{{ math.Round (div (countwords .Content) 220.0) }}
-                                                min read</span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         {{ end }}
@@ -233,8 +117,7 @@
         </div>
     </div>
 
-    {{ if not .Site.Params.Disable_stay_uptodate}}
-    <!-- CTA section -->
+    
     <div class="relative pb-16 mt-6">
         <div class="max-w-md mx-auto px-7 sm:max-w-3xl lg:max-w-7xl">
             <div class="relative px-6 py-10 overflow-hidden shadow-xl bg-primary-500 rounded-2xl sm:px-12 sm:py-20">
@@ -247,30 +130,78 @@
                 <div class="relative">
                     <div class="sm:text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                            {{ .Site.Params.P5.Heading }}
+                            Willst du Mitglied in unserem Verein werden?
                         </h2>
-                        {{ range .Site.Params.P5.Content }}
-                        <p class="max-w-2xl mx-auto mt-6 text-lg text-primary-100">
-                            {{ .text }}
-                        </p>
-                        {{ end }}
                     </div>
-                    <form action="{{ .Site.Params.P5.Action }}" class="mt-12 sm:mx-auto sm:flex sm:max-w-lg">
-                        <div class="flex-1 min-w-0">
-                            <label for="cta-email" class="sr-only">{{ .Site.Params.P5.Label }}</label>
-                            <input id="cta-email" type="email" class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500" placeholder="{{ .Site.Params.P5.Placeholder }}">
+					<div class="mt-4" style="margin-left:15%;margin-right:15%">
+						<a href="/mitgliedschaft">
+						<button class="bg-gray-900 block w-full px-5 py-3 text-base font-medium text-white border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">
+							Werde Mitglied
+						</button>
+					</a>
                         </div>
-                        <div class="mt-4 sm:mt-0 sm:ml-3">
-                            <button type="submit" class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent rounded-md shadow hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-500 sm:px-10">
-                                {{ .Site.Params.P5.Button }}
-                            </button>
                         </div>
+                    </form>
+					</div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    {{ end }}
+    
+    <div class="max-w-md px-4 mx-auto pt-12 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl text-center">
+            Sponsoren
+        </h2>
+        <div class="mt-4 grid grid-cols-2 gap-0.5 lg:grid-cols-4">
+            <a href="https://www.mey.com/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/mey.png" class="max-h-12 dark:invert" alt="Mey" loading="lazy" />
+            </a>
+            <a href="https://intersport-rebi.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/rebi.jpg" class="max-h-12 dark:invert" alt="Intersport Rebi" loading="lazy" />
+            </a>
+            <a href="https://wiedler.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/wiedler.png" class="max-h-12 dark:invert" alt="Wiedler" loading="lazy" />
+            </a>
+            <a href="https://www.praxis-attilamaisch.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/maisch.png" class="max-h-12 dark:invert" alt="Maisch" loading="lazy" />
+            </a>
+            <a href="https://www.muellerstrassenbau.eu/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/mueller.jpg" class="max-h-12 dark:invert" alt="Müller Straßenbau" loading="lazy" />
+            </a>
+            <a href="https://www.mebold.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/mebold.jpg" class="max-h-12 dark:invert" alt="Mebold" loading="lazy" />
+            </a>
+            <a href="https://www.maler-geiger.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/geiger.jpg" class="max-h-12 dark:invert" alt="Geiger" loading="lazy" />
+            </a>
+            <a href="https://www.volksbank-albstadt.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/volksbank.jpg" class="max-h-12 dark:invert" alt="Volksbank Albstadt" loading="lazy" />
+            </a>
+            <a href="https://kuechenhaus-schuhmacher.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/schuhmacher.jpg" class="max-h-12 dark:invert" alt="Küchenhaus Schuhmacher" loading="lazy" />
+            </a>
+            <a href="https://www.weberheusser-yarns.com/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/weber-heusser.png" class="max-h-12 dark:invert" alt="Weber&Heusser" loading="lazy" />
+            </a>
+            <a href="https://www.sparkasse-zollernalb.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/sparkasse.jpg" class="max-h-12 dark:invert" alt="Sparkasse Zollernalb" loading="lazy" />
+            </a>
+            <a href="http://zimmerei-reinauer.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/reinauer.png" class="max-h-12 dark:invert" alt="Reinauer" loading="lazy" />
+            </a>
+            <a href="http://www.lb-mediengruppe.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/LB-Mediengruppe.png" class="max-h-12 dark:invert" alt="LB-Mediengruppe" loading="lazy" />
+            </a>
+            <a href="https://www.albstadtwerke.de/" class="flex justify-center col-span-1 px-8 py-8 bg-gray-50 dark:bg-gray-900/10">
+                <img src="/images/sponsors/albstadtwerke.jpg" class="max-h-12 dark:invert" alt="AlbstadtWerke" loading="lazy" />
+            </a>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-6">
+        <img src="/images/home/wsj.png" alt="" class="w-full h-auto">
+    </div>
 
 </main>
 {{ end }}

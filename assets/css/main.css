@@ -19,10 +19,37 @@ NotoColorEmoji,
 Segoe UI Symbol,
 Android Emoji,
 EmojiSymbols;
-/* Custom CSS */
 
 .prose :where(h1):not(:where([class~="not-prose"] *)) {
     color: white !important;
 }
 
-/* Custom CSS end */
+.hidden-anim {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show-anim {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.icon {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 20px;
+    margin: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .item:nth-child(4) {
+        order: 3; /* Move item 2 to the top */
+    }
+
+    .item:nth-child(3) {
+        order: 4; /* Move item 2 to the top */
+    }
+  }

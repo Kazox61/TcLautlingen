@@ -5,9 +5,11 @@
     {{ partial "head.html" . }}
 </head>
 
-<body class="bg-zinc-100 dark:bg-gray-800">
+<body class="bg-zinc-100 dark:bg-gray-800 h-screen flex flex-col">
     {{ partial "nav.html" . }}
-    {{ block "main" . }}{{ end }}
+    <div class="flex-1">
+        {{ block "main" . }}{{ end }}
+    </div>
     {{ partial "footer" . }}
 </body>
 
