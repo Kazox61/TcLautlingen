@@ -8,6 +8,7 @@ enableRobotsTXT: true
 canonifyURLs: true
 paginate: 9
 enableInlineShortcodes: true
+disablePathToLower: true
 
 markup:
   goldmark:
@@ -44,9 +45,6 @@ markup:
       xhtml: false
 
 params:
-  author: Nusser Studios
-  authorimage: ../assets/images/global/author.webp
-  og_image: /images/tailbliss-cover.png
   moto: "Tennis, das verbindet"
   description: ""
 
@@ -98,7 +96,7 @@ menu:
       weight: 10
     - identifier: anleitung
       name: Anleitung
-      url: /Anleitung.html/
+      url: /pdf/Anleitung.html
       weight: 20
   footer:
     - identifier: about

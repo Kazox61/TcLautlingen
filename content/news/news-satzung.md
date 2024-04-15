@@ -3,7 +3,7 @@ title: "Sommersaison 2024"
 date: 2022-05-18T11:10:36+08:00
 draft: false
 language: en
-featured_image: ../assets/images/test/saison2024.jpg
+featured_image: ../assets/images/news/saison2024.jpg
 categories: News
 tags: News
 ---
