@@ -10,5 +10,5 @@ tags: News
 
 
 <div>
-    <div><a href="/pdf/Events-2024.html">Events 2024</a></div>
+    <div><a href="/pdf/Events-2025.html">Events 2025</a></div>
 </div>
